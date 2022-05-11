@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Link and Button Template</title>
+</head>
+<body>
+  
+<!-- 
+  Simple link 
+  - ссылка, с помощью которой должен осуществляться переход либо на внутреннюю страницу сайта, либо внешний ресурс
+
+  при клике на ссылку произойдет переход - Redirect
+-->
+<a href="https://www.youtube.com/watch?v=CvjN6T2irCk">Youtube</a>
+<hr>
+
+<!-- 
+  Download link 
+  - добавляем функциональность загрузки файлов 
+
+  файл для загрузки лежит по пути dist/text.txt
+-->
+<a href="../dist/text.txt" download>Download</a>
+<hr>
+
+<!-- 
+  Open link in new tab 
+  target - атрибут, с помощью которого можно указать КАК будет открываться страница, на которую осуществляется переход
+
+  _blank - принято все внешние ссылки открывать в новых вкладках
+-->
+<a href="https://www.youtube.com/watch?v=CvjN6T2irCk" target="_blank">Youtube</a>
+<hr>
+
+<!-- Open link in new tab -->
+<a href="tel:+123-32-23">+123-32-23</a><br>
+<a href="mailto:test@test.com">My e-mail</a><br>
+<a href="skype:test">Skype Call</a><br>
+<hr>
+
+<!-- 
+  Anchor link 
+  - ссылка якорь. Она нужна для перемещения по одной странице
+    при нажатии на нее происходит автоматический скролл до указанной секции
+
+    ! Ссылка - это самостоятельный элемент, на который можно повесить функциональность и она будет работать
+-->
+<a href="#bottom">Go to Bottom</a>
+<hr>
+
+<!-- 
+  Simple buttons
+  - кнопки. по умолчанию тег button не предполагает каки-либо атрибутов
+
+  ! Кнопка - это несамостоятельный элемент, на нее вешается какая-то логика, либо она может идти в составе формы
+
+  у кнопки есть атрибут type - который помогает определить тип кнопки
+
+  * типы submit / reset указываются, когда кнопка идет в составе формы
+ -->
+<button type="button">Button</button>
+<button type="submit">Button</button>
+<button type="reset">Button</button>
+<hr>
+
+<!-- Button with autofocus -->
+<button type="button" autofocus>Button</button>
+<hr>
+
+<!-- Disabled Button -->
+<button type="button" disabled>Button</button>
+<hr>
+
+<!-- Necessary div with id -->
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p id="bottom">
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+<p>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+</p>
+
+</body>
+</html>

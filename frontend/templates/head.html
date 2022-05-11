@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Encoding -->
+    <meta charset="UTF-8">
+
+    
+    <!-- Document title in browser tab -->
+    <title>Head Template</title>
+
+
+    <!-- ----------------------------
+      Document Favicon in browser tabs
+      Link - универсальный одиночный тег, в который помещается много
+              информации о html странице. 
+      Описывается тип этой информации с помощью аттрибута Rel
+    -->
+    <link rel="shortcut icon" href="../img/icons/favicon.ico" type="image/x-icon">
+
+
+    <!-- 
+      Additional approach to add favicon 
+      - продвинутый способ отображения этих картинок под различные варианты экранов
+      
+      retina display -> дисплеи, в которых плотность пикселей выше, чем на обычных. 
+                        поэтому, если взять картинку низкого качества, то на таких дисплеях 
+                        она превратится в размытый набор пикселей. Браузер автоматически определяет,
+                        на каком дисплее открывается страница и подключает именно нужную картинку.
+    -->
+    <link rel="apple-touch-icon" href="favicon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicon72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicon114x114.png">
+
+
+    <!-- ----------------------------
+      SEO 
+      Meta tag - с помощью него можно описать различную информацию, необходимую для продвижения
+                  и более высокого ранжирования сайта 
+      
+      name - с его помощью задаем тип данных (описание)
+      content - место, где мы описываем эти данные
+    -->
+    <meta name="description" content="Test web Page">
+    <meta name="keywords" content="html, webdev">
+    <meta name="author" content="Eugeni Bykovski">
+  
+
+    <!-- 
+      For Mobile Devices 
+      - если в поле name указать viewport, а в content описать ширину девайса и масштаб,
+      то у вас появится возможность добавлять responsive дизайн для сайтов (под различные устройства)
+
+      задает необходимые БАЗОВЫЕ настройки девайса
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+      For mobile & no resize 
+      user-scalable=no - запрещает зумить вашу страницу (лучше не делать)
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1 user-scalable=no">
+
+    <!-- 
+      Use latest version of IE 
+      можно указать http-equiv и в content указать версию браузера. 
+
+      (самый проблемный браузер - Internet Explorer)
+      этот тег поможет отобразить ваш сайт в последней версии браузера
+    
+      IE и Edge - две вариации одного браузера, где Edge более новый
+    -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+
+    <!-- ----------------------------
+      STYLES
+      For external styles 
+      - указываем путь в href до внешней таблицы стилей. С помощью этой строки 
+        вы сможете подключить вашу внешнюю таблицу стилей к html документу
+    -->
+    <link rel="stylesheet" href="../styles/style.css">
+
+    <!-- 
+      Local styles 
+      - указываем стили в самом html и только для конкретного файла  
+      Это плохая практика
+    -->
+    <style>
+      div {
+        background-color: #f5f5f5;
+      }
+    </style>
+
+
+
+    <!-- ----------------------------
+      FONTS
+      Local styles Fonts 
+      - мы выкачиваем нужные нам шрифты и подключаем их к файлу
+
+      1. положить скачанные шрифты в папку fonts
+      2. создать файл fonts.css в папке styles
+      3. определяем шрифты в fonts.css
+      4. подключаем fonts.css в html файл
+    -->
+    <link rel="stylesheet" href="../styles/fonts.css">
+
+    <!-- 
+      Google Fonts - https://fonts.google.com/
+      - в данном случае сервис генерирует нужную строку, после чего мы вставляем ее в head. 
+        дополнительно они дают подсказку, как этот шрифт определить внутри файла CSS. 
+        font-family: 'Lato', sans-serif;
+    -->
+
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap" rel="stylesheet"> -->
+  </head>
+  <body>
+    
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit omnis, tempora minus consequuntur quos optio.
+
+
+  <!-- ----------------------------
+    Условные комментарии
+      - их суть в том, что кусок разметки, которые они оборачивают, 
+        будет виден только при определенных условиях
+        (параграф в примере будет виден только при выполнении определенных, заданных мной, условий)
+
+      - в такие же условия можно оборачивать не только разметку, но и скрипты, например
+  -->
+
+  
+  <!--[if IE]>
+    <p>Lorem ipsum dolor sit amet</p>'
+  <![endif]-->
+
+  <!--[if lt IE 10]>
+    <p>Lorem less IE 10</p>
+  <![endif]-->
+
+
+
+  <!-- ----------------------------
+    JS
+    External scripts files
+
+    подключаются скрипты внутри тега body. и обязательно в конце всей разметки внутри тега script
+    (это необходимо из-за парсинга js)
+  -->
+  <script src="../js/main.js"></script>
+
+  <!-- ----------------------------
+    Local scripts
+  -->
+  <script>
+    console.log('Hello World!');
+  </script>
+
+  </body>
+</html>

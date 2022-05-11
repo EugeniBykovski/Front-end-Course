@@ -1,0 +1,135 @@
+/* 
+  ! Псевдоклассы и псевдоэлементы
+    * используются, когда возникает необходимость выбрать какой-то эл-т страницы, в котором нет тегов. Но, в тоже время, его легко идентифицировать. 
+    - это м.б. ссылка, на которую наведен курсор
+    - первая строка или буква
+
+    ! все псевдоклассы и псевдоэлементы отделяются двоеточием :
+
+  * :hover
+  * :visited - применяется только для ссылок
+  * :active - когда происходит сам клик
+  * :focus - добавляется на активный элемент, если по странице мы передвигаемся с помощью кнопки Tab. Появляется обводка + наши стили
+
+  * ::first-letter
+  * ::first-line
+  * ::selection
+
+  * ::after 
+  * ::before 
+    * - данные псевдоэлементы являются как бы отдельными элементами, созданными через CSS (свойство content - ОБЯЗАТЕЛЬНО)
+    * - результат лучше смотреть через DevTools
+
+  * Селекторы, которые используются чаще всего в списках:
+    * :first-child 
+    * :last-child
+    * :nth-child(even) - каждый четный
+    * :nth-child(odd) - каждый нечетный
+    * :nth-child(4) - если передать обычные цифры, то стили применятся к элементам, порядковый номер которых соотв. указанному
+    * :nth-child(2n) - свойство будет применено каждому 2му элементу
+    * :nth-child(2n + 1) - отсчет идет не с первого, а от первого элемента, в данном случае (результат - от первого и каждый второй элементы)
+
+  * Селекторы типа - с их помощью мы можем стилизовать одинаковые элементы по их типу
+    * :first-of-type
+    * :last-of-type 
+    * :nth-of-type(2)
+
+  * Селектор :not - позволяет выбрать что-то, отличное от другого
+*/
+
+/* Псевдоклассы */
+a {
+  color: #847999;
+  text-decoration: none;
+  
+  transition: all .3s;
+}
+
+a:hover {
+  color: #831111;
+}
+
+a:active {
+  color: green;
+}
+
+a:focus {
+  font-weight: bold;
+}
+
+a:visited {
+  color: cadetblue;
+}
+
+
+/* Псевдоэлементы */
+p::first-letter {
+  font-size: 40px;
+}
+
+p::first-line {
+  text-decoration: underline;
+}
+
+p::selection {
+  background-color: darksalmon;
+  color: darkviolet;
+}
+
+/* After / Before */
+h1::before {
+  content: 'This is ';
+
+  text-transform: uppercase;
+}
+
+h1::after {
+  content: ' here';
+
+  color: #831111;
+}
+
+/* Lists */
+.list1 li:first-child {
+  color: #b35b35;
+}
+
+.list1 li:last-child {
+  color: #7a35b3;
+}
+
+.list2 li:nth-child(even) {
+  color: #35b394;
+}
+
+.list2 li:nth-child(odd){
+  color: #b33565;
+}
+
+.list2 li:nth-child(4){
+  color: #1e96b4;
+}
+
+.list3 li:nth-child(2n) {
+  color: #35b394;
+}
+
+.list3 li:nth-child(2n + 1) {
+  color: #35b394;
+}  
+
+.text span:first-of-type {
+  color: #35b394;
+}
+
+.text span:last-of-type {
+  color: #b33565;
+}
+
+.text span:nth-of-type(2) {
+  border: 1px solid #7a35b3;
+}
+
+.list4 li:not(.item) {
+  border: 1px solid #b33565;
+}

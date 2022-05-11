@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Page 1</title>
+
+  <style>
+    h1 { color: red; }
+
+    h1 {
+      color: green;
+      font-size: 18px;
+    }
+
+    /* будет применен последний вариант применения стилей к одному и тому же тегу */
+  </style>
+
+  <link rel="stylesheet" href="../../styles/page1/style.css">
+</head>
+<body>
+  
+<!-- 
+  STYLES:
+  - определение состоит из 2х элементов:
+    - селектор (h1 / .class / #specId) - это элемент, к которому вы обращаетесь и хотите стилизировать
+    - блок объявления - набор правил, которые описаны в фигурных скобках. Правил может быть неограниченное кол-во. Именно они изменяют стиль ваших элементов 
+
+  - само правило состоит из 2х частей:
+    - объявление свойства (то, что мы планируем менять - цвет, например)
+    - значение (это величина, на которую будет изменено свойство)
+
+
+  * варианты подключений:
+    * 1. в теге head с помощью <style>...</style>
+    * 2. подключением файла со стилями '../styles/style.css'
+    * 3. добавление inline стилей style="color: blueviolet;"
+    * 4. подключением файла с использованием @import в файле style.css другого файла main.css 
+      * данный файл подключает обычно в главный стилевой файл, в который собираются все тематические остальные файлы
+-->
+
+<div class="container">
+  <h1>Some text</h1>
+
+  <h2>Some text</h2>
+  
+  <h3 style="color: rgb(84, 13, 151);">Some text</h3>
+  
+  <h4>Some text</h4>
+  
+  <h5>Some text</h5>
+  
+  <h6>Some text</h6>
+</div>
+</body>
+</html>

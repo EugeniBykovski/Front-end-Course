@@ -1,0 +1,93 @@
+/* 
+  ! Есть 5 способов позиционирования:
+  * 1. static - прописывать не нужно, он применяется по дефолту. Элемент остается в основном потоке документа
+
+  * 2. relative - относительное - элемент сформировал новый поток и мы можем управлять положением данного элемента (top / right / bottom / left). Место, которое занимал элемент, остается незаполненным (shadow element)
+
+  * 3. absolute - элемент вырывается из основного потока и место за ним теряется. Отсчет позиции идет от окна документа (window) или от родителя, которому задано св-во position: relative;
+
+  * 4. fixed - аналог absolute позиционирование, но позиция будет ВСЕГДА отсчитываться от окна браузера (window)
+
+  * 5. sticky - когда мы пытаемся скролить наш эл-т, блок находится внутри родителя и никак себя не проявляет. но, как только мы скролим до самого верха, наш блок начнет смещаться, оставаясь в границах родительского элемента. Остается в ВИДИМОЙ области экрана. Как только граница блока заканчивается, блок при скроле уходит вверх, как и весь элемент-родитель
+
+  ! Свойства задания размеров эл-та:
+  * width
+  * height
+  * max-width
+  * max-height
+  * min-width
+  * min-height
+*/
+
+body {
+  height: 1000px;
+}
+
+/* * relative */
+.test {
+  position: relative;
+  top: 20px;
+  right: 30px;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+
+  border: 5px solid #18b6b6;
+}
+
+
+/* * absolute */
+/* .parent {
+  border: 2px solid #000000;
+}
+
+.test {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+
+  border: 5px solid #18b6b6;
+} */
+
+
+/* * fixed */
+/* .test {
+  position: fixed;
+  top: 20px;
+  right: 30px;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+
+  border: 5px solid #18b6b6;
+} */
+
+
+/* * sticky */
+/* .parent {
+  bottom: 150px;
+
+  border: 2px solid #000000;
+}
+
+.test {
+  position: sticky;
+  top: 20px;
+  right: 30px;
+
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100px;
+  height: 100px;
+
+  border: 5px solid #18b6b6;
+} */

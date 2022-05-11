@@ -1,0 +1,17 @@
+@import url('main.css');
+
+h2 {
+  color: green;
+}
+
+h4 {
+  color: #863545;
+}
+
+h5 {
+  color: rgb(255, 255, 50);
+}
+
+h6 {
+  color: rgba(255, 0, 0, .4)
+}
